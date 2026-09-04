@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
         //ThemeData adalah class yang digunakan untuk mengatur tema aplikasi
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF155E63)),
       ),
-      //home: const LatihanScafold(),
-      home: ProfilLayout(),
+      home: const ProfilLayout(),
       debugShowCheckedModeBanner: false,
     );
   }

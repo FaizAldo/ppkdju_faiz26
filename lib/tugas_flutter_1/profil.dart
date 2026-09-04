@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:faizaldo_ppkd_app_dev/widgets/app_drawer.dart';
 
 class Profil extends StatelessWidget {
-const Profil({ super.key});
-
+  const Profil({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const AppDrawer(),
       appBar: AppBar(
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
         title: Text('Profil Saya'),
         backgroundColor: Color.fromARGB(255, 0, 255, 13),
         actions: [
-          Padding(padding:  EdgeInsets.only(right: 16.0),
-          child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/profile.jpeg'),
-          ),
+          Padding(
+            padding: EdgeInsets.only(right: 16.0),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/images/profile.jpeg'),
+            ),
           ),
         ],
       ),
       body: Column(
-     
         children: [
           SizedBox(height: 20),
           ListTile(
@@ -38,9 +45,10 @@ const Profil({ super.key});
               Icon(Icons.location_on, size: 16),
               SizedBox(width: 10),
               Text(
-                'Alamat: Jl. Kp. Pulo Jahe No. 39B RT 008 RW 010, Kel. Jatinegara, Kec. Cakung, Jakarta Timur, DKI Jakarta',
-                  style: TextStyle(fontSize: 16),
-            )],
+                'Alamat: Jl. Kp. Pulo Jahe No. 39B RT 008 RW 010,',
+                style: TextStyle(fontSize: 13),
+              ),
+            ],
           ),
           SizedBox(height: 10),
           ListTile(
@@ -50,7 +58,6 @@ const Profil({ super.key});
               style: TextStyle(fontSize: 16),
             ),
           ),
-
         ],
       ),
     );

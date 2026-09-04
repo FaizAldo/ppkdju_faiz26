@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:faizaldo_ppkd_app_dev/widgets/app_drawer.dart';
 
 class ProfilLayout extends StatelessWidget {
   const ProfilLayout({super.key});
@@ -6,6 +7,7 @@ class ProfilLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const AppDrawer(),
       appBar: AppBar(
         backgroundColor: const Color(0xFF155E63),
         title: Text(
@@ -16,7 +18,12 @@ class ProfilLayout extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        leading: const Icon(Icons.person),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu, color: Colors.white),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,
@@ -47,11 +54,10 @@ class ProfilLayout extends StatelessWidget {
                 child: Row(
                   children: [
                     const Icon(Icons.verified_user),
-                    SizedBox(width: 12,),
-                    Text("Verified Success")
+                    SizedBox(width: 12),
+                    Text("Verified Success"),
                   ],
                 ),
-                
               ),
               Container(
                 width: double.infinity,
@@ -174,12 +180,10 @@ class ProfilLayout extends StatelessWidget {
                 height: 120,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container( 
-                    child: ClipOval(
-                      child: Image.asset(
-                        "assets/images/profile.jpeg",
-                        fit: BoxFit.cover,
-                      ),
+                  child: ClipOval(
+                    child: Image.asset(
+                      "assets/images/profile.jpeg",
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),

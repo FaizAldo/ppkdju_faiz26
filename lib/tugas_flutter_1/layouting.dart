@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:faizaldo_ppkd_app_dev/widgets/app_drawer.dart';
 
 class Layouting extends StatelessWidget {
   const Layouting({super.key});
@@ -8,14 +9,26 @@ class Layouting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const AppDrawer(),
       appBar: AppBar(
-        title: const Text('Luminouis News', style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.bold)),
-        backgroundColor: const Color.fromARGB(255, 3, 255, 16), titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 255, 13), fontSize: 20, fontWeight: FontWeight.bold),
-        leading: IconButton(
-          icon: const Icon(Icons.view_headline, color: Color.fromARGB(255, 0, 0, 0)),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        title: const Text(
+          'Luminouis News',
+          style: TextStyle(
+            color: Color.fromARGB(255, 0, 0, 0),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: const Color.fromARGB(255, 3, 255, 16),
+        titleTextStyle: TextStyle(
+          color: Color.fromARGB(255, 0, 255, 13),
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu, color: Color.fromARGB(255, 0, 0, 0)),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
         ),
         actions: const [
           Padding(
@@ -47,10 +60,7 @@ class Layouting extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
                 'Masa Depan Energi Terbarukan: Inovasi EcoSync di Tahun 2024',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 20),
@@ -87,15 +97,15 @@ class Layouting extends StatelessWidget {
                       fontSize: 19,
                       fontWeight: FontWeight.normal,
                       fontFamily: 'Times New Roman',
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
                 ),
-                textAlign: TextAlign.left,
-              ),
+              ],
             ),
-             
           ],
         ),
-       ]
       ),
-    ));
+    );
   }
 }
