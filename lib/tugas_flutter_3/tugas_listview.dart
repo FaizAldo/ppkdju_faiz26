@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TugasListview extends StatelessWidget {
+class TugasListview extends StatefulWidget {
   const TugasListview({super.key});
 
+  @override
+  State<TugasListview> createState() => _TugasListviewState();
+}
+
+class _TugasListviewState extends State<TugasListview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

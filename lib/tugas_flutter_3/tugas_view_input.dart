@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TugasViewInput extends StatelessWidget {
+class TugasViewInput extends StatefulWidget {
   const TugasViewInput({super.key});
 
+  @override
+  State<TugasViewInput> createState() => _TugasViewInputState();
+}
+
+class _TugasViewInputState extends State<TugasViewInput> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
