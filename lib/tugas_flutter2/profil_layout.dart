@@ -132,7 +132,7 @@ class ProfilLayout extends StatelessWidget {
                   Expanded(
                     child: Container(
                       height: 120,
-                      color: const Color(0xFFEAF4F2),
+                      color: const Color.fromARGB(255, 0, 253, 13),
                       padding: const EdgeInsets.all(8.0),
                       child: const Column(
                         children: [
