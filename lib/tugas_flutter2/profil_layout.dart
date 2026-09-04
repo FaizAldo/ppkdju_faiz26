@@ -172,12 +172,14 @@ class ProfilLayout extends StatelessWidget {
               SizedBox(
                 width: 120,
                 height: 120,
-                child: Container(
-                  color: Colors.white,
-                  child: ClipOval(
-                    child: Image.asset(
-                      "assets/images/profile.jpeg",
-                      fit: BoxFit.cover,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container( 
+                    child: ClipOval(
+                      child: Image.asset(
+                        "assets/images/profile.jpeg",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
