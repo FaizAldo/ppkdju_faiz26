@@ -44,7 +44,14 @@ class ProfilLayout extends StatelessWidget {
                 width: double.infinity,
                 color: const Color(0xFFD5E9E6),
                 padding: const EdgeInsets.symmetric(vertical: 14),
-                child: const Icon(Icons.verified_user),
+                child: Row(
+                  children: [
+                    const Icon(Icons.verified_user),
+                    SizedBox(width: 12,),
+                    Text("Verified Success")
+                  ],
+                ),
+                
               ),
               Container(
                 width: double.infinity,
@@ -60,7 +67,7 @@ class ProfilLayout extends StatelessWidget {
                         "Muhammad Faiz Aldo Firmansyah",
                         style: TextStyle(
                           color: Color(0xFF155E63),
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
