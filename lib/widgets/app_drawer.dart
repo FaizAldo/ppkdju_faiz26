@@ -5,6 +5,7 @@ import 'package:faizaldo_ppkd_app_dev/latihan_widget/latihan_ricthtext.dart';
 import 'package:faizaldo_ppkd_app_dev/latihan_widget/latihan_row.dart';
 import 'package:faizaldo_ppkd_app_dev/latihan_widget/latihan_scafold.dart';
 import 'package:faizaldo_ppkd_app_dev/latihan_widget/latihan_text.dart';
+import 'package:faizaldo_ppkd_app_dev/home/home.dart';
 import 'package:faizaldo_ppkd_app_dev/tugas_flutter_1/layouting.dart';
 import 'package:faizaldo_ppkd_app_dev/tugas_flutter_1/profil.dart';
 import 'package:faizaldo_ppkd_app_dev/tugas_flutter2/profil_layout.dart';
@@ -36,6 +37,7 @@ class AppDrawer extends StatelessWidget {
               accountName: Text('Muhammad Faiz Aldo Firmansyah'),
               accountEmail: Text('Menu Halaman'),
             ),
+            _item(context, Icons.home, 'Home', const Home()),
             _item(context, Icons.person, 'Profil Saya', const ProfilLayout()),
             _item(
               context,

@@ -1,4 +1,4 @@
-import 'package:faizaldo_ppkd_app_dev/tugas_flutter2/profil_layout.dart';
+import 'package:faizaldo_ppkd_app_dev/home/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         //ThemeData adalah class yang digunakan untuk mengatur tema aplikasi
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF155E63)),
       ),
-      home: const ProfilLayout(),
+      home: const Home(),
       debugShowCheckedModeBanner: false,
     );
   }
