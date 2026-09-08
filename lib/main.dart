@@ -1,3 +1,4 @@
+import 'package:faizaldo_ppkd_app_dev/latihan_widget/latihan_column.dart';
 import 'package:faizaldo_ppkd_app_dev/tgs_btn/tgs_btn.dart';
 import 'package:faizaldo_ppkd_app_dev/tugas_flutter2/profil_layout.dart';
 import 'package:faizaldo_ppkd_app_dev/tugas_flutter_1/layouting.dart';
